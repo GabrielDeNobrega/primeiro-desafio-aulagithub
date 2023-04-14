@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import application.services.CalculatorService;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -18,9 +20,8 @@ public class Program {
 		System.out.print("Insert the second number: ");
 		Integer secondNumber = sc.nextInt();
 
-		Integer finalResult = firstNumber + secondNumber;
-
-		System.out.println("The final result of the sum is equal to " + finalResult + ".");
+		System.out.println("The final result of the sum is equal to "
+				+ CalculatorService.sumTwoIntegerNumbers(firstNumber, secondNumber) + ".");
 
 		sc.close();
 
